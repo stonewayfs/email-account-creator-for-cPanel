@@ -1,7 +1,7 @@
 <?php
 session_start();
-include ('header.php');
-include('global.php');
+require 'header.php';
+require 'global.php';
     //ITL CPANEL EMAIL CREATOR
     //CC-BY MAARTEN EYSKENS
     //All used code snipsets used where under public domain
@@ -17,7 +17,7 @@ $sql= mysql_fetch_array($sql);
     include ('footer.php');
     exit;
     }
-require_once('api.php');
+@require 'api.php' ;
 $ip = 'localhost';
 $xmlapi = new xmlapi($ip);
 $xmlapi->password_auth($cpuser,$cppass);
