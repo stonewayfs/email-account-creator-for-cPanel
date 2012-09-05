@@ -2,7 +2,7 @@
 session_start();
 require 'header.php';
 require 'global.php';
-    //ITL CPANEL EMAIL CREATOR
+    //IMSTR CPANEL EMAIL CREATOR
     //CC-BY MAARTEN EYSKENS
     //All used code snipsets used where under public domain
 
