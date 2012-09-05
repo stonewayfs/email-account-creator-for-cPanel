@@ -1,12 +1,12 @@
 <?php
 session_start();
-include ('header.php');
+require 'header.php';
 
     //ITL CPANEL EMAIL CREATOR
     //CC-BY MAARTEN EYSKENS
     //All used code snipsets used where under public domain
-include('global.php');
-require_once('recaptchalib.php');
+require 'global.php';
+@require 'recaptchalib.php';
 $resp = null;
 $error = null;
 if ($_POST["recaptcha_response_field"]) {
@@ -72,5 +72,5 @@ $sql2=mysql_fetch_array($sql2);
     <input type="submit" name="go" value="<?php echo $lang['next']; ?>" />
 </form>
 <?php
-include ('footer.php');
+require 'footer.php';
 ?>

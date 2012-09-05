@@ -1,13 +1,13 @@
 <?php
 session_start();
-include ('header.php');
-include ('global.php');
+require 'header.php';
+require 'global.php';
     if (empty($_SESSION['email'])){
        echo 'You should not be here!'; 
        $fp = fopen('hacktries.txt', 'a+');
        fwrite($fp, "$uip \n");
-       include ('footer.php');
-       exit;
+       require 'footer.php';
+       exit();
         }
 $to=$_SESSION['email'];
 $uname=$_SESSION['name'];
@@ -33,7 +33,7 @@ $_SESSION['email']="";
 $_SESSION['name']="";
 $_SESSION['user']="";
 $_SESSION['pass']="";
-include ('footer.php');
+require 'footer.php';
 ?>
 
     

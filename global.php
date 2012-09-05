@@ -3,8 +3,8 @@
     define('THIS', 'emailcreator');
     echo 'sorry test is closed';
     exit;
-    include ('config.php');
-    include ('lang.php');
+    require 'config.php';
+    require 'lang.php';
     $connect = mysql_connect($host, $user, $pass) or die("Could not connect to server, error: ".mysql_error());
     mysql_select_db($db, $connect) or die("Could not connect to database, error: ".mysql_error());
     function secure($string = ''){
